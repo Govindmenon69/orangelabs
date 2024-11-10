@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static List with Centered Image and Text Below - Enhanced Dark Theme</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensure the body takes at least the full height of the viewport */
+            background-color: #121212; /* Dark background */
+            color: #ffffff; /* Light text color */
+            position: relative; /* Position relative for absolute children */
+        }
+
+        .container {
+            flex: 1; /* Allow container to grow and fill available space */
+            width: 800px; /* Fixed width for the content */
+            margin: 0 auto; /* Center the container */
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center; /* Center the heading */
+            color: #ffffff; /* Light color for the heading */
+            margin-bottom: 20px; /* Space below the heading */
+            font-size: 2em; /* Increase font size */
+        }
+
+        .static-list {
+            list-style-type: none; /* Remove default list styling */
+            padding: 0; /* Remove default padding */
+            margin: 0; /* Remove default margin */
+            display: flex; /* Use flexbox for list */
+            flex-wrap: wrap; /* Allow items to wrap to new lines */
+            justify-content: center; /* Center items horizontally */
+        }
+
+        .static-list li {
+            background-color: #1e1e1e; /* Dark grey background for list items */
+            margin: 10px; /* Space around items */
+            padding: 15px; /* Space inside items */
+            width: 150px; /* Fixed width */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Enhanced shadow for depth */
+            display: flex; /* Use flexbox for item content */
+            flex-direction: column; /* Stack items vertically */
+            align-items: center; /* Center items horizontally */
+            border-radius: 8px; /* Rounded corners */
+            transition: transform 0.2s, box-shadow 0.2s; /* Smooth transition for hover effects */
+        }
+
+        .static-list li:hover {
+            transform: translateY(-5px); /* Lift effect on hover */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7); /* Deeper shadow on hover */
+        }
+
+        .static-list img {
+            width: 50px; /* Set image width */
+            height: auto; /* Maintain aspect ratio */
+            margin-bottom: 10px; /* Space below image */
+        }
+
+        footer {
+            text-align: center; /* Center the footer text */
+            padding: 15px; /* Padding inside footer */
+            background-color: #1e1e1e; /* Dark grey background for footer */
+            border-top: 1px solid #333; /* Darker top border */
+            width: 100%; /* Full width */
+            position: relative; /* Position relative to the body */
+            bottom: 0; /* Stick to the bottom */
+            font-size: 0.9em; /* Slightly smaller font size */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Orange Labs : CDN-pblc-img-gh1 image list</h1>
+        <ul class="static-list">
+            <li>
+                <img src="https://orangelabs.ddns.net/cdn/bs.gif" alt="Item 1 Image">
+                /bs.gif
+            </li>
+            <li>
+                <img src="https://orangelabs.ddns.net/cdn/roh-heart-data.png" alt="Item 2 Image">
+                /roh-heart-data.png
+            </li>
+            <li>
+                <img src=" https://orangelabs.ddns.net/cdn/niggermoulee.png" alt="Item 3 Image">
+                /niggermoulee.png
+            </li>
+            <li>
+                <img src=" https://orangelabs.ddns.net/cdn/guk.png" alt="Item 4 Image">
+                /guk.png
+            </li>
+            <li>
+                <img src=" https://orangelabs.ddns.net/cdn/ganesh.png" alt="Item 5 Image">
+                /ganesh.png
+            </li>
+            <li>
+                <img src=" https://orangelabs.ddns.net/cdn/hehesushil.png" alt="Item 5 Image">
+                /hehesushil.png
+            </li>
+            <li>
+                <img src=" https://orangelabs.ddns.net/cdn/orange-labs.png" alt="Item 5 Image">
+                /orange-labs.png
+            </li>
+            <li>
+                <img src=" https://orangelabs.ddns.net/cdn/sushilblock9.png" alt="Item 5 Image">
+                /sushilblock9.png
+            </li>
+            <li>
+                <img src=" https://orangelabs.ddns.net/cdn/sushillookingatharini.png" alt="Item 5 Image">
+                /sushillookingatharini.png
+            </li>
+            <li>
+                <img src=" https://orangelabs.ddns.net/cdn/sushilpfp.jpg alt="Item 5 Image">
+                /sushilpfp.jpg
+            </li>
+            <li>
+                <img src=" https://orangelabs.ddns.net/cdn/sushilthinklaptop.png" alt="Item 5 Image">
+                /sushilthinklaptop.png
+            </li>
+            <li>
+                <img src=" https://orangelabs.ddns.net/cdn/toiletganesh.png" alt="Item 5 Image">
+                /toilet-ganesh.png
+            </li>
+            <li>
+                <img src=" https://orangelabs.ddns.net/cdn/wank.png" alt="Item 5 Image">
+                /wank.png
+            </li>
+        </ul>
+    </div>
+    <footer>
+        &copy; 2024 Orange Labs , All rights reserved    </footer>
+</body>
+</html>

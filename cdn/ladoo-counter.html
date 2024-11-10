@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> : ) </title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            margin: 30px;
+        }
+
+        #counter-value {
+            height: 50px;
+            min-width: 120px;
+            border-radius: 10px;
+            background-color: rgba(0, 128, 0, 0.2);
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Visual representation of rate of ladoos eaten by Ganesh PER DAY!</h1>
+        <div class="counter">
+            <div id="counter-value">0</div>
+        </div>
+    </div>
+    <script>
+        let counter = 0;
+        const counterValue = document.getElementById('counter-value');
+
+        // Function to get the current date in YYYY-MM-DD format
+        function getCurrentDate() {
+            const today = new Date();
+            return today.toISOString().split('T')[0];
+        }
+
+        // Function to reset the counter if the date has changed
+        function resetCounterIfNeeded() {
+            const lastDate = localStorage.getItem('lastDate');
+            const currentDate = getCurrentDate();
+
+            if (lastDate !== currentDate) {
+                counter = 0; // Reset counter
+                localStorage.setItem('lastDate', currentDate); // Update last date
+            } else {
+                counter = parseInt(localStorage.getItem('counter')) || 0; // Retrieve saved counter
+            }
+        }
+
+        // Function to update the counter value on the page
+        function updateCounter() {
+            counterValue.innerHTML = counter;
+        }
+
+        // Function to increment the counter by a random value between 1 and 5
+        function incrementCounter() {
+            const randomIncrement = Math.floor(Math.random() * 14) + 1; // Random number between 1 and 5
+            counter += randomIncrement;
+            localStorage.setItem('counter', counter); // Save counter to localStorage
+            updateCounter();
+        }
+
+        // Initialize the counter
+        resetCounterIfNeeded();
+        updateCounter();
+        setInterval(incrementCounter, 1000); // Increment every second
+    </script>
+</body>
+</html>
