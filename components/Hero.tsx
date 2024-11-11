@@ -57,7 +57,7 @@ const Hero = () => {
           />
 
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-            Hello! we're Orange Labs , Coders and Designers from India 🇮🇳
+            Hello! we're Orange Labs | Coders and Designers from India 🇮🇳
           </p>
 
           <a href="#about">
